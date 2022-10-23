@@ -1,0 +1,18 @@
+.NavMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-xs);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+
+    .NavMenu__Link {
+        min-height: 32px;
+        padding-inline: var(--spacing-xs);
+        
+        &[aria-selected="true"] {
+            border-bottom: 4px solid var(--primary-color);
+        }
+    }
+}

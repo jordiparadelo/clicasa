@@ -1,26 +1,80 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root {
+  /* Colors */
+  --key-color: 206;
+  --primary-color: hsl(var(--key-color), 63%, 50%);
+  --hover-color: hsl(var(--key-color), 100%, 64%);
+  --active-color: hsl(var(--key-color), 100%, 52%);
+  --gray-color: hsl(var(--key-color), 50%, 80%);
+  --dark-color: hsl(var(--key-color), 100%, 10%);
+  --light-color: hsl(var(--key-color), 100%, 98%);
+  --white-color: hsl(var(--key-color), 100%, 100%);
+  --font-color: hsl(var(--key-color), 100%, 6%);
+  /* Spacing */
+  --spacing: 16px;
+  --spacing-xs: calc(var(--spacing) / 2);
+  --spacing-lg: calc(var(--spacing) * 1.5);
+  --spacing-xl: calc(var(--spacing) * 2);
+  --spacing-xxl: calc(var(--spacing) * 3);
+  --spacing-xxxl: calc(var(--spacing) * 4);
+  /* Corners */
+  --corners: 8px;
+  --corners-xs: calc(var(--corners) / 2);
+  --corners-lg: calc(var(--corners) * 1.5);
+  --corners-xl: calc(var(--corners) * 2);
+  --corners-xxl: calc(var(--corners) * 3);
+  --corners-round: 999px;
+  /* Fonts */
+  --font-family: "Lato", system-ui, sans-serif;
+  /* Transitions */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Shadows */
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.08), 0 6px 6px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 14px 28px rgba(0, 0, 0, 0.08), 0 10px 10px rgba(0, 0, 0, 0.04);
+  --shadow-xxl: 0 19px 38px rgba(0, 0, 0, 0.08), 0 15px 12px rgba(0, 0, 0, 0.04);
 }
+
+/* Reset Styles */
+* {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Font Size  */
+body *:is(h1, h2, h3, h4, h5) {
+  --fontSize: clamp(var(--fontBase), 2.4vw, calc(var(--fontSizeRatio) * 1rem));
+  line-height: 1.1;
+  font-size: var(--fontSize);
+}
+
+body h1 {
+  --fontBase: 32px;
+  --fontSizeRatio: 3;
+} /* 26px | 40px */
+body h2 {
+  --fontBase: 32px;
+  --fontSizeRatio: 3;
+} /* 24px | 32px */
+body h3 {
+  --fontBase: 20px;
+  --fontSizeRatio: 1.5;
+} /* 20px | 24px */
+body h4 {
+  --fontBase: 18px;
+  --fontSizeRatio: 1.25;
+} /* 18px | 20px */
+body h5 {
+  --fontBase: 16px;
+  --fontSizeRatio: 1;
+} /* 16px */
 
 a {
+  text-decoration: unset;
   color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }

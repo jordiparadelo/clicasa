@@ -1,0 +1,14 @@
+.Navbar {
+    --height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 40px;
+    height: var(--height);
+    background-color: var(--white-color);
+
+    @media screen and (min-width: 768px){
+        --height: 120px;
+    }
+}
