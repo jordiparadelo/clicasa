@@ -14,27 +14,52 @@ export const conections = {
 
 export const ventajas = [
   {
-    icon: images.Phone,
+    icon: images.Hour24hs,
     title: "Oferta en 24 h",
     description:
       "No te preocupes de su estado, ni de reparaciones para eneseñarlo",
   },
   {
-    icon: images.Phone,
+    icon: images.Wallet,
     title: "Pago inmediato",
     description:
       "No te preocupes de su estado, ni de reparaciones para eneseñarlo",
   },
   {
-    icon: images.Phone,
+    icon: images.Send,
     title: "Ahórrate el papeleo",
     description:
       "Si lo necesitas también podemos ayudarte a encontrar tu nuevo hogar",
   },
   {
-    icon: images.Phone,
+    icon: images.Calendar,
     title: "Tu eliges la fecha",
     description:
       "Si lo necesitas también podemos ayudarte a encontrar tu nuevo hogar",
+  },
+];
+
+export const proceso = [
+  {
+    image: images.Process,
+    title: "Descríbemos tu inmueble",
+    description:
+      "No te preocupes de su estado, ni de reparaciones para eneseñarlo",
+  },
+  {
+    image: images.Process,
+    title: "Recibe una oferta en 24 horas",
+    description: "Piénsatela!",
+  },
+  {
+    image: images.Process,
+    title: "Dinos hasta cuando quieres quedarte",
+    description:
+      "Nos ajustamos a tus necesidades, cuando tu estés listo nosotros también lo estaremos",
+  },
+  {
+    image: images.Process,
+    title: "Ya está!",
+    description: "Firma la venta y recibe el dinero",
   },
 ];

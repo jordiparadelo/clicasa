@@ -19,7 +19,7 @@
     :global(.Card) {
       display: flex;
       flex-direction: row;
-      gap: var(--spacing);
+      gap: var(--spacing-lg);
       align-items: center;
 
       :global(.Card__icon) {

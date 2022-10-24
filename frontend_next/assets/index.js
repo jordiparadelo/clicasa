@@ -9,6 +9,11 @@ import Linkedin from "./icons/icon-linkedin.svg";
 import Logo from "./Logo.svg";
 import PlayButton from "./icons/icon-facebook.svg";
 import Home from "./icons/ui-home.svg";
+import Hour24hs from "./icons/glyph-24hs.svg";
+import Calendar from "./icons/glyph-calendar.svg";
+import Send from "./icons/glyph-send.svg";
+import Wallet from "./icons/glyph-wallet.svg";
+import Process from "./images/proceso-image.jpg";
 
 export const images = {
   Logo,
@@ -20,5 +25,10 @@ export const images = {
   Twitter,
   Linkedin,
   PlayButton,
-  Home
+  Home,
+  Hour24hs,
+  Calendar,
+  Send,
+  Wallet,
+  Process
 };

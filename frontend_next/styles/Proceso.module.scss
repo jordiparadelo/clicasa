@@ -1,3 +1,190 @@
-#Proceso {
-    
+.Proceso {
+  position: relative;
+  padding: unset;
+
+  // Background
+  .Proceso__background {
+    background-image: url(../assets/images/proceso-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+  }
+
+  :global(.wrapper) {
+    gap: var(--spacing);
+
+    :global(.section-header) {
+      position: relative;
+      padding: 40px 24px 24px;
+      h2 {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  // Tabs
+  :global(.ProcessTab) {
+    display: flex;
+    flex-direction: row;
+    :global(.ProcessTab__header) {
+      display: flex;
+      flex-direction: column;
+      color: var(--text-color);
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(2px);
+
+      :global(button) {
+        --corners: 0;
+        --background: unset;
+        color: inherit;
+        white-space: normal;
+        align-items: start;
+        text-align: left;
+        gap: var(--spacing-xs);
+        text-transform: initial;
+        font-weight: normal;
+        padding: var(--spacing);
+        padding-block-start: var(--spacing-lg);
+        border-right: 4px solid transparent;
+
+        :global(.tab-index) {
+          --size: 32px;
+          --number-size: m#{a}x(14px, calc(var(--size) * 0.6));
+          --background: var(--gray-color);
+
+          width: var(--size);
+          height: var(--size);
+          color: var(--dark-color);
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: var(--number-size);
+          border-radius: var(--corners-round);
+          background: var(--background);
+        }
+
+        :global(.tab-content) {
+          display: flex;
+          flex-direction: column;
+          gap: var(--spacing-xs);
+
+          :global(.tab-title) {
+            font-size: 18px;
+          }
+        }
+
+        // When Tab is selected
+        &[aria-selected="true"] {
+          background-color: var(--white-color);
+          border-color: var(--primary-color);
+
+          :global(.tab-index) {
+            --background: var(--primary-color);
+            color: var(--white-color);
+          }
+        }
+      }
+    }
+    :global(.ProcessTab__panel) {
+      display: flex;
+      flex-direction: row;
+
+      img {
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
+
+  // List
+  :global(.ProcessList) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    margin-inline: 24px;
+
+    :global(.ProcessList__item) {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing);
+
+      :global(.item-header) {
+        display: inherit;
+        flex-direction: row;
+        gap: inherit;
+      }
+      :global(.index) {
+        --size: 32px;
+        --number-size: m#{a}x(14px, calc(var(--size) * 0.6));
+        --background: var(--primary-color);
+
+        width: var(--size);
+        height: var(--size);
+        color: var(--white-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: var(--number-size);
+        border-radius: var(--corners-round);
+        background: var(--background);
+      }
+      :global(.content) {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+
+        :global(.ProcessList__item-title) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    :global(.ProcessTab) {
+      flex-direction: column;
+      :global(.ProcessTab__header) {
+        flex-direction: row;
+
+        :global(button) {
+          border-bottom: 4px solid transparent;
+          border-right: unset;
+          flex-grow: 1;
+          flex-basis: 20ch;
+
+          :global(.tab-index) {
+            --size: 40px;
+          }
+        }
+      }
+      :global(.ProcessTab__panel) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    padding: 120px 24px 40px 24px;
+
+    .Proceso__background {
+      display: block;
+      min-height: 70%;
+    }
+
+    :global(.wrapper) {
+      gap: var(--spacing-xxl);
+
+      :global(.section-header) {
+        position: static;
+      }
+    }
+  }
 }
