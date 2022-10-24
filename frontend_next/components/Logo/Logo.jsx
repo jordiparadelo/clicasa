@@ -10,10 +10,6 @@ const Logo = () => {
     <Link href="/" >
       <a className={`${styles.Logo}`}>
         <img {...images.Logo} />
-        <strong className={`${styles.Logo__texto}`}>
-          <span className={`${styles.cli}`}>Cli</span>
-          <span className={`${styles.casa}`}>Casa</span>
-        </strong>
       </a>
     </Link>
   );

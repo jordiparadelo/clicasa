@@ -1,3 +1,41 @@
-#Hero {
-    
+.Hero {
+  background-image: url(../assets/images/hero-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 40px 24px;
+
+  color: var(--white-color);
+  :global(.wrapper) {
+    align-items: center;
+    gap: var(--spacing-xl);
+    text-align: center;
+  }
+
+  .PlayButton {
+    --corners: var(--corners-round);
+    --padding: var(--spacing-xs);
+    display: none;
+    gap: var(--spacing);
+    background: rgba(255, 255, 255, 0.8);
+    padding-inline-start: var(--spacing);
+    color: var(--primary-color);
+  }
+
+  // Media
+  @media screen and (min-width: 600px) {
+    padding-inline: 40px;
+    padding-block-start: 80px;
+    padding-block-end: 128px;
+
+    .Buscador__container {
+      input {
+        min-width: 34ch;
+      }
+    }
+
+    .PlayButton {
+        display: flex;
+    }
+  }
 }

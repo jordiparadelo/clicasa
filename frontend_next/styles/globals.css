@@ -48,14 +48,15 @@ body {
 
 /* Font Size  */
 body *:is(h1, h2, h3, h4, h5) {
-  --fontSize: clamp(var(--fontBase), 2.4vw, calc(var(--fontSizeRatio) * 1rem));
+  --fontSize: clamp(var(--fontBase), 5vw, calc(var(--fontSizeRatio) * 1rem));
   line-height: 1.1;
   font-size: var(--fontSize);
+  font-weight: 100;
 }
 
 body h1 {
-  --fontBase: 32px;
-  --fontSizeRatio: 3;
+  --fontBase: 40px;
+  --fontSizeRatio: 5;
 } /* 26px | 40px */
 body h2 {
   --fontBase: 32px;
@@ -77,4 +78,56 @@ body h5 {
 a {
   text-decoration: unset;
   color: inherit;
+}
+
+/* Buttons */
+button,
+.button {
+  --background: var(--primary-color);
+  --size: 40px;
+  --padding: calc(var(--size) / 2);
+  --corners: var(--corners-xs);
+
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--white-color);
+  background: var(--background);
+  min-width: var(--size);
+  min-height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--padding);
+  border: unset;
+  border-radius: var(--corners);
+  text-transform: uppercase;
+  transition: background 0.4s var(--ease);
+  white-space: nowrap;
+  cursor: pointer;
+}
+/* Primary */
+*:is(button, .button).primary {
+  color: white;
+}
+*:is(button, .button).primary:is(:hover, :focus) {
+  --background: var(--hover-color);
+}
+
+/* App */
+.wrapper {
+  --max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-width);
+  width: 100%;
+  margin-inline: auto;
+}
+.wrapper > * {
+  /* max-width: 100%; */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    --max-width: 768px;
+  }
 }
