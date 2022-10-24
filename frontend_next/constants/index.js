@@ -11,3 +11,30 @@ export const conections = {
   linkedin: { link: "http://www.linkedin.com/clicasa", icon: images.Linkedin },
   youtube: { link: "http://www.youtube.com/clicasa", icon: images.Youtube },
 };
+
+export const ventajas = [
+  {
+    icon: images.Phone,
+    title: "Oferta en 24 h",
+    description:
+      "No te preocupes de su estado, ni de reparaciones para eneseñarlo",
+  },
+  {
+    icon: images.Phone,
+    title: "Pago inmediato",
+    description:
+      "No te preocupes de su estado, ni de reparaciones para eneseñarlo",
+  },
+  {
+    icon: images.Phone,
+    title: "Ahórrate el papeleo",
+    description:
+      "Si lo necesitas también podemos ayudarte a encontrar tu nuevo hogar",
+  },
+  {
+    icon: images.Phone,
+    title: "Tu eliges la fecha",
+    description:
+      "Si lo necesitas también podemos ayudarte a encontrar tu nuevo hogar",
+  },
+];

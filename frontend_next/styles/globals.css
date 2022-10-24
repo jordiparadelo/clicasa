@@ -131,3 +131,23 @@ button,
     --max-width: 768px;
   }
 }
+
+section {
+  padding-block: 40px;
+  padding-inline: 24px;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 65ch;
+  margin-inline: auto;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 600px) {
+  section {
+    padding-block: 64px;
+  }
+}

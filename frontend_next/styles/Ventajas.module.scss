@@ -1,3 +1,72 @@
-#Ventajas {
-    
+.Ventajas {
+  background-color: inherit;
+
+  :global(.wrapper) {
+    gap: var(--spacing-xxl);
+  }
+
+  :global(.section-header) {
+    :global(h2) {
+      color: var(--primary-color);
+    }
+  }
+
+  :global(.VentajasList) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+
+    :global(.Card) {
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing);
+      align-items: center;
+
+      :global(.Card__icon) {
+        --size: 76px;
+        width: var(--size);
+        height: var(--size);
+      }
+
+      :global(.Card__description) {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+      }
+      :global(.Card__title) {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+  }
+
+  //   Media
+  @media screen and (min-width: 600px) {
+    padding-block: 0;
+    margin-block: -64px;
+
+    :global(.wrapper) {
+        padding-block: 56px;
+        padding-inline: 32px;
+        background-color: var(--white-color);
+        gap: var(--spacing-xxl);
+      }
+
+    :global(.VentajasList) {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      :global(.Card) {
+        flex-direction: column;
+        text-align: center;
+        flex-basis: 17ch;
+        flex-grow: 1;
+
+        :global(.Card__description) {
+            gap: inherit;
+        }
+      }
+    }
+  }
 }
