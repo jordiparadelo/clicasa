@@ -59,7 +59,7 @@ body h1 {
   --fontSizeRatio: 5;
 } /* 26px | 40px */
 body h2 {
-  --fontBase: 32px;
+  --fontBase: 24px;
   --fontSizeRatio: 3;
 } /* 24px | 32px */
 body h3 {

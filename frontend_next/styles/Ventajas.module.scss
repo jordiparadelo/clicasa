@@ -1,5 +1,7 @@
 .Ventajas {
   background-color: inherit;
+  position: relative;
+  z-index: 2;
 
   :global(.wrapper) {
     gap: var(--spacing-xxl);

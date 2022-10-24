@@ -1,3 +1,39 @@
 .Banner {
-    
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+    :global(.wrapper) {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        gap: var(--spacing-xl);
+        align-items: center;
+    }
+    .Banner__description {
+        max-width: 80ch;
+    }
+    .Banner__cta {
+        --size: 48px;
+        --corners: var(--corners-round);
+        --background: unset;
+        border: 1px solid var(--white-color);
+    }
+    .Banner__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-image: url(../assets/images/hero-image.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        mix-blend-mode: multiply;
+        z-index: 0;
+    }
+
+    @media screen and (min-width: 600px) {
+        padding-block-start: 120px;
+    }
 }

@@ -1,6 +1,7 @@
 .Proceso {
   position: relative;
-  padding: unset;
+  padding-inline: unset;
+  z-index: 1;
 
   // Background
   .Proceso__background {
@@ -172,11 +173,12 @@
   }
 
   @media screen and (min-width: 600px) {
-    padding: 120px 24px 40px 24px;
+    padding: 120px 24px 0 24px;
+    margin-block-end: -64px;
 
     .Proceso__background {
       display: block;
-      min-height: 70%;
+      max-height: 70%;
     }
 
     :global(.wrapper) {
