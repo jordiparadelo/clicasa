@@ -32,6 +32,7 @@
 
     // Actions
     &:not([aria-hidden="false"]) {
+      --box-shadow: unset;
       transform: translateX(-100%);
     }
   }

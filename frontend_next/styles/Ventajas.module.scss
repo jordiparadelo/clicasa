@@ -25,7 +25,7 @@
       align-items: center;
 
       :global(.Card__icon) {
-        --size: 76px;
+        --size: 56px;
         width: var(--size);
         height: var(--size);
       }
@@ -65,6 +65,9 @@
         flex-basis: 17ch;
         flex-grow: 1;
 
+        :global(.Card__icon) {
+          --size: 76px;
+        }
         :global(.Card__description) {
             gap: inherit;
         }

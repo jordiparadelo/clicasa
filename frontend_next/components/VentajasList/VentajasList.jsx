@@ -1,4 +1,3 @@
-import { images } from "assets";
 import React from "react";
 
 const VentajasList = ({ ventajas }) => {

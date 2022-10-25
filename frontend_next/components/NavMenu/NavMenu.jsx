@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 // Styles
@@ -10,20 +10,19 @@ import { images } from "assets";
 
 const NavMenu = ({ links }) => {
   const { asPath } = useRouter();
-  const [toggle, setToggle] = useState(false);
+  const [state, setState] = useState(false);
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  useEffect(() => {
-    isMobile ? setToggle(toggle) : setToggle(false)
-  }, [isMobile])
-
+  function toggle() {
+    setState((state) => !state);
+    state
+      ? document.body.style.removeProperty("overflow-y")
+      : (document.body.style.overflowY = "hidden");
+  }
 
   return (
     <>
-      <menu
-        className={`${styles.NavMenu}`}
-        aria-hidden={!toggle}
-      >
+      <menu className={`${styles.NavMenu}`} aria-hidden={!state}>
         {links.map((link, index) => (
           <Link href={link.href || "#"} key={index}>
             <a
@@ -37,10 +36,10 @@ const NavMenu = ({ links }) => {
       </menu>
       <button
         className={`${styles.HamburgerButton}`}
-        onClick={() => setToggle((prevState) => !prevState)}
+        onClick={toggle}
         alt="Toggle navbar menu"
       >
-        {toggle ? (
+        {state ? (
           <img {...images.MenuClose} alt="Cerrar Menu" />
         ) : (
           <img {...images.MenuOpen} alt="Abrir Menu" />
