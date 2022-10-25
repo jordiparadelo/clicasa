@@ -58,6 +58,10 @@
     .Footer__bottom {
       padding-block-start: var(--spacing-xs);
       border-top: var(--border);
+
+      > *:not(:global(.legals)) {
+        flex-shrink: 0;
+      }
     }
   }
   @media screen and (max-width: 768px) {

@@ -4,12 +4,34 @@
   background-repeat: no-repeat;
   background-position: bottom;
   padding: 40px 24px;
-
   color: var(--white-color);
+
   :global(.wrapper) {
     align-items: center;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-xxl);
     text-align: center;
+
+    .Hero__title {
+      strong {
+        position: relative;
+
+        :global(.cta-arrow) {
+          --size: clamp(56px, 10vw, 1em);
+          width: var(--size);
+          height: var(--size);
+          object-fit: contain;
+          position: absolute;
+          top: 100%;
+          right: 0%;
+          transform: translateY(-1vw);
+        }
+      }
+    }
+  }
+
+  .Hero__subtitle {
+    line-height: 1.5;
+    margin-inline: auto;
   }
 
   .PlayButton {
@@ -20,6 +42,23 @@
     background: rgba(255, 255, 255, 0.8);
     padding-inline-start: var(--spacing);
     color: var(--primary-color);
+
+    :global(.icon) {
+      --size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: var(--corners-round);
+      width: var(--size);
+      height: var(--size);
+      background: var(--primary-color);
+
+      > * {
+        --icon-size: calc(var(--size) * 0.6);
+        width: var(--icon-size);
+        height: var(--icon-size);
+      }
+    }
   }
 
   // Media
@@ -34,8 +73,13 @@
       }
     }
 
+    .Hero__subtitle {
+      font-size: 18px;
+      max-width: 40ch;
+    }
+
     .PlayButton {
-        display: flex;
+      display: flex;
     }
   }
 }

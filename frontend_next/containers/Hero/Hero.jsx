@@ -10,12 +10,12 @@ const Hero = () => {
   return (
     <header id="Hero" className={`${styles.Hero}`}>
       <div className="wrapper">
-        <h1>
-          Vende tu casa <br/> en un <strong>clic</strong>
+        <h1 className={`${styles.Hero__title}`}>
+          Vende tu casa <br/> en un <strong>clic <img {... images.CTArrow} className="cta-arrow" alt="Haz click en el buscador"/></strong>
         </h1>
         <Buscador />
-        <p>Compramos tu casa directamente sin complicaciones ni preocupaciones.</p>
-        <button className={`${styles.PlayButton}`}>  Ver video <img {...images.PlayButton} alt="Reproducir video" /></button>
+        <p className={`${styles.Hero__subtitle}`}>Compramos tu casa directamente sin complicaciones ni preocupaciones.</p>
+        <button className={`${styles.PlayButton}`}>  Ver video <span className='icon'><img {...images.PlayButton} alt="Reproducir video" /></span></button>
       </div>
     </header>
   );
