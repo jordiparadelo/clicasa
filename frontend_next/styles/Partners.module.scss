@@ -1,0 +1,16 @@
+.Partners {
+  :global(.wrapper) {
+    gap: var(--spacing-xxl);
+  }
+
+  :global(.PartnerList) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing);
+
+    > * {
+        flex-basis: 250px;
+    }
+  }
+}

@@ -86,3 +86,22 @@ export const testimonios = [
     testimonial: "Sonia M.",
   },
 ];
+
+export const partners = [
+  {
+    image: images.Inmonoseguros,
+    alt: "Inmoseguros Servicios Inmobiliarios",
+  },
+  {
+    image: images.Mapfre,
+    alt: "Mapfre",
+  },
+  {
+    image: images.Inmonoseguros,
+    alt: "Inmoseguros Servicios Inmobiliarios",
+  },
+  {
+    image: images.Mapfre,
+    alt: "Mapfre",
+  },
+];
