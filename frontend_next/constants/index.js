@@ -105,3 +105,14 @@ export const partners = [
     alt: "Mapfre",
   },
 ];
+
+export const banner = {
+  title: "Las mejores condiciones del mercado inmobiliario",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus non fuga atque animi magni commodi, omnis reprehenderit assumenda facere tempore architecto ea! Modi placeat aliquid assumenda nostrum! Nulla, quia earum.",
+  cta: { 
+    slug: "Descubre nuestas tarifas",
+    link: "#",
+  },
+  background: images.Banner,
+};

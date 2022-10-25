@@ -3,25 +3,32 @@ import React from "react";
 import styles from "styles/Banner.module.scss";
 
 const Banner = ({ title, description, cta, background }) => {
+  const backgroundFormat = background.src
+    ? `url(${background.src}); mix-blend-mode: multiply`
+    : background;
+
   return (
     <section className={`${styles.Banner}`}>
       <div className="wrapper">
-        <h2 className={`${styles.Banner__title}`}>
-          Las mejores condiciones del mercado inmobiliario
-        </h2>
-        <p className={`${styles.Banner__description}`}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus non
-          fuga atque animi magni commodi, omnis reprehenderit assumenda facere
-          tempore architecto ea! Modi placeat aliquid assumenda nostrum! Nulla,
-          quia earum.
-        </p>
-        <button className={`${styles.Banner__cta}`}>
-          Descubre nuestas tarifas
-        </button>
+        <h2 className={`${styles.Banner__title}`}>{title}</h2>
+        <p className={`${styles.Banner__description}`}>{description}</p>
+        <a className={`${styles.Banner__cta}`} href={cta.link}>
+          {cta.slug}
+        </a>
       </div>
-      <div className={`${styles.Banner__background}`}></div>
+      <div
+        className={`${styles.Banner__background}`}
+        style={{ "--background": backgroundFormat }}
+      ></div>
     </section>
   );
 };
 
 export default Banner;
+
+Banner.defaultProps = {
+  title: "Banner Titulo",
+  description: "Banner descripción",
+  cta: { slug: "CTA llamativo 👀", link: "#" },
+  background: "var(--primary-color)",
+};

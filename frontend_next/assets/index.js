@@ -22,6 +22,8 @@ import CTArrow from "./icons/glyph-cta_arrow.png";
 // Empresas
 import Inmonoseguros from "./images/inmoseguros-logo.jpg";
 import Mapfre from "./images/mapfre-logo.jpg";
+import Banner from "./images/banner-image.jpg";
+
 
 export const images = {
   Logo,
@@ -44,4 +46,5 @@ export const images = {
   Mapfre,
   MenuOpen,
   MenuClose,
+  Banner
 };

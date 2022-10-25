@@ -1,6 +1,6 @@
 .Banner {
     position: relative;
-    background-color: var(--primary-color);
+    background-color: var(--hover-color);
     color: var(--white-color);
 
     :global(.wrapper) {
@@ -17,19 +17,26 @@
         --size: 48px;
         --corners: var(--corners-round);
         --background: unset;
-        border: 1px solid var(--white-color);
+        display: flex;
+        padding-inline: calc(var(--size) * 0.5);
+        min-width: var(--size);
+        min-height: var(--size);
+        border-radius: var(--corners);
+        border: 2px solid var(--white-color);
+        align-items: center;
+        text-transform: uppercase;
     }
     .Banner__background {
+        --background: var(--primary-color);
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         height: 100%;
-        background-image: url(../assets/images/hero-image.jpg);
+        background: var(--background);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        mix-blend-mode: multiply;
         z-index: 0;
     }
 
