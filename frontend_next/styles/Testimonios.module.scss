@@ -1,3 +1,5 @@
-#Testimonios {
-    
+.Testimonios {
+    :global(.wrapper) {
+        gap: var(--spacing-xxl)
+    }
 }

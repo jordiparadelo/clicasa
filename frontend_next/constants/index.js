@@ -63,3 +63,26 @@ export const proceso = [
     description: "Firma la venta y recibe el dinero",
   },
 ];
+
+export const testimonios = [
+  {
+    image: images.Process,
+    title: "Fue realmente fácil, en una semana vendí mi piso",
+    testimonial: "Sonia M.",
+  },
+  {
+    image: images.Process,
+    title: "Recibe una oferta en 24 horas",
+    testimonial: "Sonia M.",
+  },
+  {
+    image: images.Process,
+    title: "Dinos hasta cuando quieres quedarte",
+    testimonial: "Sonia M.",
+  },
+  {
+    image: images.Process,
+    title: "Ya está!",
+    testimonial: "Sonia M.",
+  },
+];

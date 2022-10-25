@@ -5,7 +5,6 @@ import styles from "styles/Ventajas.module.scss";
 import { VentajasList } from "components";
 
 const Ventajas = ({ventajas}) => {
-    console.log(ventajas)
   return (
     <section id="Ventajas" className={`${styles.Ventajas}`}>
       <div className="wrapper">

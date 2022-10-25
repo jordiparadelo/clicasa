@@ -5,9 +5,9 @@ import styles from "styles/Home.module.css";
 // Containers
 import {Hero,Ventajas,Proceso,Banner,Testimonios} from 'containers'
 // Constants
-import { ventajas, proceso } from "../constants";
+import { ventajas, proceso, testimonios } from "../constants";
 
-export default function Home({ventajas, proceso}) {
+export default function Home({ventajas, proceso, testimonios}) {
   return (
     <>
       <Head>
@@ -20,7 +20,7 @@ export default function Home({ventajas, proceso}) {
         <Ventajas ventajas={ventajas}/>
         <Proceso proceso={proceso}/>
         <Banner/>
-        <Testimonios/>
+        <Testimonios testimonios={testimonios}/>
       </main>
     </>
   );
@@ -30,7 +30,8 @@ export async function getStaticProps() {
   return {
       props: {
           ventajas,
-          proceso
+          proceso,
+          testimonios
       }
   }
 }
