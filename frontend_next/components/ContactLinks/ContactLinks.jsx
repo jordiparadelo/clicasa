@@ -2,9 +2,9 @@ import React from 'react';
 // Styles
 import styles from 'styles/ContactLinks.module.scss';
 
-const ContactLinks = ({children}) => {
+const ContactLinks = ({children, className}) => {
     return (
-        <div className={`${styles.ContactLinks}`} role="listbox">
+        <div className={`${styles.ContactLinks} ${className}`} role="listbox">
             {children}
         </div>
     );

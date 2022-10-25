@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className={styles.Navbar}>
       <Logo />
       <NavMenu links={links} />
-      <ContactLinks>
+      <ContactLinks className="ContactLinks--navbar">
         <ContactButton contact="phone" label="910 123 456"/>
         <ContactButton contact="whatsapp"/>
         <ContactButton contact="email"/>

@@ -10,6 +10,8 @@ import Logo from "./Logo.svg";
 import PlayButton from "./icons/icon-facebook.svg";
 // Ui
 import Home from "./icons/ui-home.svg";
+import MenuOpen from "./icons/ui-menu_open.svg";
+import MenuClose from "./icons/ui-menu_close.svg";
 // Glyphs
 import Hour24hs from "./icons/glyph-24hs.svg";
 import Calendar from "./icons/glyph-calendar.svg";
@@ -38,4 +40,6 @@ export const images = {
   Process,
   Inmonoseguros,
   Mapfre,
+  MenuOpen,
+  MenuClose,
 };

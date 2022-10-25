@@ -1,14 +1,43 @@
 .Navbar {
-    --height: 80px;
+  --height: 80px;
 
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--spacing);
+  height: var(--height);
+  background-color: var(--white-color);
+
+  :global(.Logo) {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 40px;
-    height: var(--height);
-    background-color: var(--white-color);
+    flex-shrink: 1;
+    flex-direction: column;
 
-    @media screen and (min-width: 768px){
-        --height: 120px;
+    > * {
+      flex-grow: 1;
+      max-width: 100%;
     }
+  }
+
+  @media screen and (max-width: 1000px) {
+    :global(.Logo) {
+      margin-inline-end: auto;
+      flex-basis: 126px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    :global(.Logo) {
+    }
+    a {
+      :global(.label) {
+        display: none;
+      }
+    }
+
+    :global(.ContactLinks--navbar) {  
+      gap: 0px;
+      flex-wrap: nowrap;
+    }
+  }
 }

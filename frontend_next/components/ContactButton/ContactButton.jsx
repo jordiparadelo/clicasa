@@ -13,10 +13,10 @@ const ContactButton = ({ contact, label }) => {
 
   return (
     links && (
-      <a href={links[contact].link} className={`${styles.ContactButton}`} target="_blank" noreferrer>
+      <a href={links[contact].link} className={`${styles.ContactButton}`} target="_blank" rel="noreferrer" >
         <>
           <img {...links[contact].icon} alt={contact} />
-          {label || null}
+          {label ? <span className="label">{label}</span> : null}
         </>
       </a>
     )
