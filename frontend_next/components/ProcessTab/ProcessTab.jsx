@@ -6,13 +6,15 @@ const ProcessTab = ({ tabs }) => {
 
   return (
     tabs && (
-      <div className="ProcessTab">
+      <div className="ProcessTab" role="tablist">
         <div className="ProcessTab__header">
           {tabs.map((tab, index) => (
             <button
               key={index}
               onClick={() => setActiveTab(index)}
+              role="tab"
               aria-selected={index === activeTab}
+              aria-controls={`panel-${index}`}
             >
               <span className="tab-index">{index + 1}</span>
               <div className="tab-content">
