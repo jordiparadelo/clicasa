@@ -6,7 +6,7 @@ import Youtube from "./icons/icon-youtube.svg";
 import Email from "./icons/icon-email.svg";
 import Twitter from "./icons/icon-twitter.svg";
 import Linkedin from "./icons/icon-linkedin.svg";
-import Logo from "./Logo.svg";
+import Logo from "./logo.svg";
 // Ui
 import Home from "./icons/ui-home.svg";
 import MenuOpen from "./icons/ui-menu_open.svg";
