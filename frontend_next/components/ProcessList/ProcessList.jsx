@@ -14,7 +14,7 @@ const ProcessList = ({ list }) => {
                 <p className="ProcessList__description">{item.description}</p>
               </div>
             </header>
-            <Image {...item.image} alt={item.title} className="ProcessList__image" />
+            <Image src={item.image.src} width={item.image.width} height={item.image.height} alt={item.title} className="ProcessList__image" />
           </figure>
         ))}
       </div>

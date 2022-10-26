@@ -11,7 +11,7 @@ export const MobileVersion = () => (
       <Logo />
       <menu className="footer-menu">
         {footerMenu.map((item, index) => (
-          <a href={item.link}>{item.slug}</a>
+          <a href={item.link} key={index}>{item.slug}</a>
         ))}
       </menu>
     </div>
@@ -48,7 +48,7 @@ export const DesktopVersion = () => (
       </div>
       <menu className="footer-menu">
         {footerMenu.map((item, index) => (
-          <a href={item.link}>{item.slug}</a>
+          <a href={item.link} key={index}>{item.slug}</a>
         ))}
       </menu>
       <ContactLinks>

@@ -40,9 +40,9 @@ const NavMenu = ({ links }) => {
         alt="Toggle navbar menu"
       >
         {state ? (
-          <img {...images.MenuClose} alt="Cerrar Menu" />
+          <img src={images.MenuClose.src} alt="Cerrar Menu" />
         ) : (
-          <img {...images.MenuOpen} alt="Abrir Menu" />
+          <img src={images.MenuOpen.src} alt="Abrir Menu" />
         )}
       </button>
     </>

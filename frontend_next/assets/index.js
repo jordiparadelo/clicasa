@@ -23,6 +23,8 @@ import CTArrow from "./icons/glyph-cta_arrow.png";
 import Inmonoseguros from "./images/inmoseguros-logo.jpg";
 import Mapfre from "./images/mapfre-logo.jpg";
 import Banner from "./images/banner-image.jpg";
+import Hero from "./images/hero-image.jpg";
+import Ventas from "./images/ventas-image.jpg";
 
 
 export const images = {
@@ -46,5 +48,7 @@ export const images = {
   Mapfre,
   MenuOpen,
   MenuClose,
-  Banner
+  Banner,
+  Hero,
+  Ventas
 };

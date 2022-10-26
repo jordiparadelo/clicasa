@@ -5,7 +5,7 @@ const PartnerList = ({list}) => {
   return (
     <div className="PartnerList" role="list">
       {list.map((item, index) => (
-        <Image {...item.image} alt={item.alt}/>
+        <Image src={item.image.src} width={item.image.width} height={item.image.height} alt={item.alt} key={index}/>
       ))}
     </div>
   );

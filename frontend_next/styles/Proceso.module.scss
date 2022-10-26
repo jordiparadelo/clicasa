@@ -17,14 +17,11 @@
   }
 
   :global(.wrapper) {
-    gap: var(--spacing);
+    gap: var(--spacing-xl);
 
     :global(.section-header) {
       position: relative;
       padding: 40px 24px 24px;
-      h2 {
-        color: var(--primary-color);
-      }
     }
   }
 
@@ -95,6 +92,8 @@
     :global(.ProcessTab__panel) {
       display: flex;
       flex-direction: row;
+      min-height: 300px;
+      height: 60vh;
 
       img {
         object-fit: cover;

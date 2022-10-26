@@ -47,18 +47,18 @@ export const proceso = [
       "No te preocupes de su estado, ni de reparaciones para eneseñarlo",
   },
   {
-    image: images.Process,
+    image: images.Banner,
     title: "Recibe una oferta en 24 horas",
     description: "Piénsatela!",
   },
   {
-    image: images.Process,
+    image: images.Ventas,
     title: "Dinos hasta cuando quieres quedarte",
     description:
       "Nos ajustamos a tus necesidades, cuando tu estés listo nosotros también lo estaremos",
   },
   {
-    image: images.Process,
+    image: images.Hero,
     title: "Ya está!",
     description: "Firma la venta y recibe el dinero",
   },

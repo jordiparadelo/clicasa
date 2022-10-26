@@ -2,62 +2,55 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 // Styles
 import styles from "styles/TestimonialSlider.module.scss";
-// Services
-import { mouseDownHandler, mouseMoveHandler, mouseUpHandler } from "./services";
+// Lib
+import { Autoplay, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
-const TestimonialSlider = ({ testimonials, itemPerView }) => {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const paginationLength = testimonials.length / Number(itemPerView)
-  let paginationButtons = []
-
-  for(let i = 0; i < paginationLength; i++) {
-    paginationButtons.push(i)
-  }
-
-  let sliderWrapperRef = useRef(null);
-
-  useEffect(() => {
-    sliderWrapperRef.addEventListener("mousemove", mouseMoveHandler);
-    sliderWrapperRef.addEventListener("mousedown", mouseDownHandler);
-    sliderWrapperRef.addEventListener("mouseup", mouseUpHandler);
-    sliderWrapperRef.addEventListener("mouseleave", mouseUpHandler);
-  }, []);
-
-    useEffect(() => {
-      const left = (sliderWrapperRef.scrollWidth / (activeSlide + 1)) + 'px'
-      sliderWrapperRef.scrollTo = {left: left, behavior: 'smooth'}
-    }, [activeSlide])
-
+const TestimonialSlider = ({ testimonials }) => {
   return (
-    <div className={`${styles.TestimonialSlider}`}>
-      <div
-        className={`${styles.TestimonialSlider__wrapper}`}
-        ref={(current) => (sliderWrapperRef = current)}
+    <>
+      <Swiper
+        className={`${styles.TestimonialSlider}`}
+        modules={[Autoplay, Pagination]}
+        slidesPerView={1}
+        spaceBetween={24}
+        speed={800}
+        autoplay={{ delay: 4000 }}
+        autoHeight={true}
+        pagination={{ clickable: true }}
+        breakpoints={
+          // when window width is >= 600px
+          {
+            600: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          }
+        }
       >
         {testimonials.map((testimonial, index) => (
-          <figure
-            aria-selected={index === activeSlide}
+          <SwiperSlide
             key={index}
             className={`${styles.TestimonialSlider__slide}`}
           >
-            <Image {...testimonial.image} alt={testimonial.title} />
+            <Image
+              src={testimonial.image.src}
+              width={testimonial.image.width}
+              height={testimonial.image.height}
+              alt={testimonial.title}
+            />
             <figcaption>
               <blockquote>{testimonial.title}</blockquote>
               <p>{testimonial.testimonial}</p>
             </figcaption>
-          </figure>
+          </SwiperSlide>
         ))}
-      </div>
-      <div className={`${styles.TestimonialSlider__pagination}`}>
-        {paginationButtons.map(( index) => (
-          <button
-            aria-selected={index === activeSlide}
-            key={index}
-            onClick={() => setActiveSlide(index)}
-          ></button>
-        ))}
-      </div>
-    </div>
+      </Swiper>
+    </>
   );
 };
 

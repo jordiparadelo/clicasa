@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 const ProcessTab = ({ tabs }) => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
     tabs && (
@@ -23,7 +23,12 @@ const ProcessTab = ({ tabs }) => {
           ))}
         </div>
         <div className="ProcessTab__panel">
-          <Image {...tabs[activeTab].image} alt={tabs[activeTab].title} />
+          <Image
+            src={tabs[activeTab].image.src}
+            width={tabs[activeTab].image.width}
+            height={tabs[activeTab].image.height}
+            alt={tabs[activeTab].title}
+          />
         </div>
       </div>
     )

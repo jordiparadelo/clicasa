@@ -7,7 +7,7 @@ const Logo = () => {
   return (
     <Link href="/" >
       <a className="Logo">
-        <img {...images.Logo} />
+        <img src={images.Logo.src} />
       </a>
     </Link>
   );

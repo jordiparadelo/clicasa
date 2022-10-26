@@ -7,6 +7,8 @@
   color: var(--white-color);
 
   :global(.wrapper) {
+    position: relative;
+    z-index: 1;
     align-items: center;
     gap: var(--spacing-xxl);
     text-align: center;
@@ -62,6 +64,20 @@
   }
 
   // Media
+  @media screen and (max-width: 600px) {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 30%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(360deg, var(--primary-color), transparent);
+      mix-blend-mode: multiply;
+    }
+  }
   @media screen and (min-width: 600px) {
     padding-inline: 40px;
     padding-block-start: 80px;
